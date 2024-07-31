@@ -1,10 +1,8 @@
 import {
-  Theme,
   Box,
   DataList,
   Badge,
   Card,
-  ThemePanel,
   TextField,
   Link,
 } from "@radix-ui/themes";
@@ -20,8 +18,6 @@ export default function MyApp() {
   const [valid, setValid] = useState(false);
 
   return (
-    <Theme accentColor="purple" grayColor="gray" radius="large" scaling="95%">
-      {/* <ThemePanel /> */}
       <Flex
         justify="center"
         align="center"
@@ -34,9 +30,11 @@ export default function MyApp() {
           backgroundRepeat: "none",
         }}
       >
+        <Card>
         <h1 style={{ fontSize: "2rem" }}>
           Form Validation on NextJS with Radix UI
         </h1>
+        </Card>
         {/* Card starts here */}
 
         <Card>
@@ -70,7 +68,7 @@ export default function MyApp() {
                 }}
               />
               <TextField.Root
-                style={{ width: "300px" }}
+                style={{ width: "300px" , marginBottom: '2rem'}}
                 size="2"
                 placeholder="Insert your last name"
                 value={lastName}
@@ -117,7 +115,6 @@ export default function MyApp() {
           </DataList.Root>
         </Card>
       </Flex>
-    </Theme>
   );
 
   function validateForm() {
