@@ -83,7 +83,7 @@ export default function MyApp() {
           </Box>
         </Card>
 
-        {/* Cards ends here */}
+        {/* Card ends here */}
         <Card>
           <DataList.Root>
             <DataList.Item align="center">
