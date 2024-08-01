@@ -47,6 +47,9 @@ export default function MyApp() {
               justify="center"
             >
               <h1 style={{ fontSize: "2rem" }}>Insert your data</h1>
+
+              <Flex direction="column">
+              <p style={{ fontWeight: "500" }}>Name</p>
               <TextField.Root
                 style={{ width: "300px" }}
                 size="2"
@@ -61,8 +64,10 @@ export default function MyApp() {
                   validateForm();
                 }}
               />
+              <div style={{marginBottom: '1rem'}}></div>
+              <p style={{ fontWeight: "500" }}>Last Name</p>
               <TextField.Root
-                style={{ width: "300px" }}
+                style={{ width: "300px"}}
                 size="2"
                 placeholder="Insert your first name"
                 value={name}
@@ -75,8 +80,10 @@ export default function MyApp() {
                   validateForm();
                 }}
               />
+              <div style={{marginBottom: '1rem'}}></div>
+              <p style={{ fontWeight: "500" }}>E-mail</p>
               <TextField.Root
-                style={{ width: "300px" , marginBottom: '2rem'}}
+                style={{ width: "300px"}}
                 size="2"
                 placeholder="Insert your last name"
                 value={lastName}
@@ -89,6 +96,9 @@ export default function MyApp() {
                   validateForm();
                 }}
               />
+              <div style={{marginBottom: '1rem'}}></div>
+              </Flex>
+
             </Flex>
           </Box>
         </Card>

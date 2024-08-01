@@ -9,7 +9,7 @@ export default function Document() {
     <Html lang="en">
       <Head />
       <body>
-      <Theme accentColor="purple" grayColor="gray" radius="large" scaling="95%">
+      <Theme appearance="dark" accentColor="purple" grayColor="gray" radius="large" scaling="95%">
       {/* <ThemePanel /> */}
         <Main />
         <NextScript />
