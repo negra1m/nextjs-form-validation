@@ -66,6 +66,10 @@ export default function MyApp() {
                   setName(e.currentTarget.value);
                   validateForm();
                 }}
+                onKeyUp={(e) => {
+                  setName(e.currentTarget.value);
+                  validateForm();
+                }}
               />
               <TextField.Root
                 style={{ width: "300px" , marginBottom: '2rem'}}
@@ -111,6 +115,7 @@ export default function MyApp() {
             <DataList.Item>
               <DataList.Label minWidth="88px">Last Name</DataList.Label>
               <DataList.Value>{lastName}</DataList.Value>
+            <span>valid: {valid.toString()}</span>
             </DataList.Item>
           </DataList.Root>
         </Card>
@@ -119,8 +124,8 @@ export default function MyApp() {
 
   function validateForm() {
     setValid(
-      name != "" &&
-        lastName != "" &&
+      name.trim() !== '' &&
+      lastName.trim() !== '' &&
         /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(email)
         ? true
         : false
