@@ -56,6 +56,10 @@ export default function MyApp() {
                   setEmail(e.currentTarget.value);
                   validateForm();
                 }}
+                onKeyUp={(e) => {
+                  setEmail(e.currentTarget.value);
+                  validateForm();
+                }}
               />
               <TextField.Root
                 style={{ width: "300px" }}
@@ -77,6 +81,10 @@ export default function MyApp() {
                 placeholder="Insert your last name"
                 value={lastName}
                 onChange={(e) => {
+                  setLastName(e.currentTarget.value);
+                  validateForm();
+                }}
+                onKeyUp={(e) => {
                   setLastName(e.currentTarget.value);
                   validateForm();
                 }}
