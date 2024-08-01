@@ -123,7 +123,6 @@ export default function MyApp() {
             <DataList.Item>
               <DataList.Label minWidth="88px">Last Name</DataList.Label>
               <DataList.Value>{lastName}</DataList.Value>
-            <span>valid: {valid.toString()}</span>
             </DataList.Item>
           </DataList.Root>
         </Card>
